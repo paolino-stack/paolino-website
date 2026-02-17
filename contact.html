@@ -19,18 +19,35 @@
     </header>
 
     <section class="card p24">
-      <h1>Contatti</h1>
-      <p>Scrivimi due righe, e se hai già una demo mandami anche un link. Ti rispondo con il prossimo slot disponibile.</p>
+     <h2>Scrivimi</h2>
+  <p class="small">Compila e invia, mi arriva via email.</p>
 
-      <div class="grid">
-        <div class="card p18">
-          <h2>Email</h2>
-          <p>
-            <a class="btn primary" href="mailto:tuamail@example.com?subject=Consulenza%20musicale&body=Ciao%20Marco,%0A%0ATi%20scrivo%20per%20una%20consulenza.%0A%0AMi%20serve%20aiuto%20su:%20...%0A%0ALink%20demo:%20...%0A%0AObiettivo%20del%20brano:%20...%0A%0AReference%20track:%20...%0A">
-              Scrivimi via email
-            </a>
-          </p>
-          <p class="small">Sostituisci tuamail@example.com con la tua email reale.</p>
+  <form action="https://formspree.io/f/mreakjqz" method="POST">
+    <div class="form-row">
+      <div>
+        <label for="name">Nome</label>
+        <input id="name" name="name" placeholder="Il tuo nome" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="nome@email.com" required />
+      </div>
+    </div>
+
+    <label for="link">Link demo</label>
+    <input id="link" name="demo_link" placeholder="Google Drive, SoundCloud privato, Dropbox, ecc" />
+
+    <label for="msg">Messaggio</label>
+    <textarea id="msg" name="message" placeholder="Che tipo di brano è, obiettivo, reference, cosa ti serve" required></textarea>
+
+    <input type="hidden" name="_subject" value="Nuova richiesta dal sito, consulenza musicale" />
+    <input type="hidden" name="_format" value="plain" />
+
+    <div class="btns">
+      <button class="btn primary" type="submit">Invia</button>
+      <a class="btn" href="index.html">Torna alla Home</a>
+    </div>
+  </form>
         </div>
 
         <div class="card p18">
