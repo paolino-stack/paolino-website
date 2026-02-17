@@ -1,23 +1,96 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sito di Marco</title>
-    <style>
-      body { font-family: system-ui, Arial, sans-serif; margin: 40px; line-height: 1.5; }
-      .card { max-width: 720px; padding: 24px; border: 1px solid #ddd; border-radius: 12px; }
-      a { text-decoration: none; }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <h1>Ciao, sono paolino 👋</h1>
-      <p>Questo è un sito statico pubblicato con GitHub + Vercel.</p>
-      <p>
-        Contatti:
-        <a href="mailto:tuamail@example.com">tuamail@example.com</a>
-      </p>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulenza Musicale, trasformo idee in hit</title>
+  <meta name="description" content="Consulenza musicale, produzione creativa, arrangiamento, songwriting e feedback professionale. Trasformo le tue idee in un brano credibile e pronto a uscire." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="index.html">
+        <span class="badge" aria-hidden="true"></span>
+        <strong>Marco, Music Consultant</strong>
+      </a>
+      <ul>
+        <li><a href="services.html">Servizi</a></li>
+        <li><a href="about.html">Chi sono</a></li>
+        <li><a href="contact.html">Contatti</a></li>
+      </ul>
+    </header>
+
+    <section class="hero">
+      <div class="card p24">
+        <h1>Porto le tue idee fino al punto in cui suonano come una hit.</h1>
+        <p>
+          Se hai una bozza, una melodia, un testo, o solo un “mood”, ti aiuto a trasformarlo in un brano
+          con direzione chiara, scelte giuste, e un suono credibile.
+        </p>
+        <p class="small">
+          Focus: pop, indie pop, urban soft, rock moderno, songwriting, arrangiamenti, sound design “radio friendly”.
+        </p>
+
+        <div class="btns">
+          <a class="btn primary" href="contact.html">Prenota una call</a>
+          <a class="btn" href="services.html">Vedi i pacchetti</a>
+        </div>
+
+        <div class="kpi">
+          <div class="item">
+            <strong>Feedback che sblocca</strong>
+            <span>capisci cosa non funziona e perché</span>
+          </div>
+          <div class="item">
+            <strong>Direzione artistica</strong>
+            <span>stile, riferimento, identità del brano</span>
+          </div>
+          <div class="item">
+            <strong>Roadmap pratica</strong>
+            <span>passi concreti, non teoria</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card p24">
+        <h2>Risultato tipico in 7 giorni</h2>
+        <ul class="list">
+          <li>Brief e obiettivo chiaro (che tipo di brano, per chi, dove vuoi arrivare)</li>
+          <li>2, 3 reference track scelte bene</li>
+          <li>Struttura proposta (intro, strofa, pre, rit, bridge)</li>
+          <li>Indicazioni su sound, arrangement, mix “ready”</li>
+          <li>Lista priorità, cosa fare prima e cosa tagliare</li>
+        </ul>
+        <hr />
+        <p class="small">
+          Vuoi solo un parere rapido? Ho anche sessioni “one shot”.
+        </p>
+      </aside>
+    </section>
+
+    <section class="card p24">
+      <h2>Cosa faccio, senza fumo</h2>
+      <div class="grid">
+        <div class="card p18">
+          <h2>Songwriting, testo e melodia</h2>
+          <p>Rendo il ritornello memorabile, sistemo metriche, armonie, hook e dinamica.</p>
+        </div>
+        <div class="card p18">
+          <h2>Arrangiamento e sound</h2>
+          <p>Scelgo i suoni giusti, tolgo il superfluo, costruisco impatto e crescita.</p>
+        </div>
+        <div class="card p18">
+          <h2>Feedback “producer mode”</h2>
+          <p>Analisi tecnica e artistica, con azioni concrete, subito applicabili.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Marco, consulenza musicale. Tutti i diritti riservati.</div>
+      <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+    </footer>
+  </div>
+</body>
 </html>
