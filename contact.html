@@ -95,12 +95,14 @@
       body: JSON.stringify(data)
     });
 
-    if (r.ok) {
-      alert("Messaggio inviato. Ti rispondo appena possibile.");
-      form.reset();
-    } else {
-      alert("Errore invio. Riprova o scrivimi direttamente.");
-    }
+   const txt = await r.text();
+
+if (r.ok) {
+  alert("Messaggio inviato. Ti rispondo appena possibile.");
+  form.reset();
+} else {
+  alert("Errore invio: " + txt);
+}
   });
 </script>
 
