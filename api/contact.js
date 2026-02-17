@@ -20,7 +20,7 @@ export default async function handler(req, res) {
       return res.status(500).json({ ok: false, error: "Telegram not configured" });
     }
 
-    const tgResp = await fetch(`https://api.telegram.org/bot${8370901993:AAEvg5nIbgNTogQojXtehQCfaq6G0GDcnM8
+    const tgResp = await fetch(`https://api.telegram.org/bot${token
 }/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
