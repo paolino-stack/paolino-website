@@ -22,7 +22,7 @@
      <h2>Scrivimi</h2>
   <p class="small">Compila e invia, mi arriva via email.</p>
 
-  <form action="https://formspree.io/f/mreakjqz" method="POST">
+<form id="contactForm">
     <div class="form-row">
       <div>
         <label for="name">Nome</label>
@@ -81,6 +81,29 @@
       <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
     </footer>
   </div>
+  <script>
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    const r = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (r.ok) {
+      alert("Messaggio inviato. Ti rispondo appena possibile.");
+      form.reset();
+    } else {
+      alert("Errore invio. Riprova o scrivimi direttamente.");
+    }
+  });
+</script>
+
 </body>
 </html>
 
